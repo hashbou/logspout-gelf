@@ -5,7 +5,7 @@ This module allows Logspout to send Docker logs in the GELF format to Graylog vi
 To build, you'll need to fork [Logspout](https://github.com/gliderlabs/logspout), add the following code to `modules.go` 
 
 ```
-_ "github.com/micahhausler/logspout-gelf"
+_ "github.com/hashbou/logspout-gelf"
 ```
 and run `docker build -t $(whoami)/logspout:gelf`
 
@@ -15,7 +15,7 @@ and run `docker build -t $(whoami)/logspout:gelf`
 docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -p 8000:80 \
-    micahhausler/logspout:gelf \
+    hashbou/logspout:gelf \
     gelf://<graylog_host>:12201
 
 ```
